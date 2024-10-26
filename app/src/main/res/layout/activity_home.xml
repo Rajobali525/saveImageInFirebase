@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="20dp"
+    tools:context="com.HomeActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search Data Here"
+        android:layout_margin="20dp"
+        android:id="@+id/inputSearch"
+        android:background="@drawable/input_search"
+        android:paddingLeft="20dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textStyle="bold"
+        android:paddingRight="20dp"
+        android:drawableRight="@drawable/baseline_search_24"/>
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@+id/inputSearch"
+      android:id="@+id/recyclerView"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/floatingbutton"
+        android:background="#6FD813"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/baseline_add_circle_add"
+        android:backgroundTint="#137A0C"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="25dp"/>
+
+
+
+
+</RelativeLayout>

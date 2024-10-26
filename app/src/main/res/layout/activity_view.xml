@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#1DE8D0"
+    tools:context="com.example.ViewActivity">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/car"
+        android:scaleType="fitXY"
+        android:layout_margin="20dp"
+        android:id="@+id/image_single_view_activity"/>
+
+    <TextView
+        android:id="@+id/textView_single_view_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Car"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:textColor="#4CAF50"
+        android:gravity="center"
+        android:layout_marginTop="240dp"
+    />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btndelete"
+        android:text="Delete"
+        android:layout_below="@+id/textView_single_view_activity"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/btn"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"/>
+
+
+</RelativeLayout>

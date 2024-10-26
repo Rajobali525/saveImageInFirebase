@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "67986766912",
+    "firebase_url": "https://biodata-368b8-default-rtdb.firebaseio.com",
+    "project_id": "biodata-368b8",
+    "storage_bucket": "biodata-368b8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:67986766912:android:ec1a1acba14f368a45f3a5",
+        "android_client_info": {
+          "package_name": "com.example.savedata"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAP9d80rgXMNchvYejvOxAhG1qM0-xSYnU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
