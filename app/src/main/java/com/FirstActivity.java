@@ -27,6 +27,7 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_first);
 
+
         signInEmailEditText = findViewById(R.id.signInEmailedittextid);
         signInPasswordEditText = findViewById(R.id.signInPasswordedittextid);
         signUpTextView = findViewById(R.id.signUpTextviewid);
