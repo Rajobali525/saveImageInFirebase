@@ -19,11 +19,13 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.FirstActivity;
+import com.HomeActivity;
 import com.example.savedata.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 
 public class SecondActivity extends AppCompatActivity implements View.OnClickListener {
     private EditText signUpEmailEditText, signUpPasswordEditText;
@@ -31,6 +33,7 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
     private Button signUpButton;
     private FirebaseAuth mAuth;
     private ProgressBar progressBar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,9 +105,18 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
             public void onComplete(@NonNull Task<AuthResult> task) {
                 progressBar.setVisibility(View.GONE);
                 if(task.isSuccessful()){
-                    Toast.makeText(getApplicationContext(),"Register is successfully",Toast.LENGTH_LONG).show();
+
+                    finish();
+                    Intent intent = new Intent(SecondActivity.this, HomeActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
                 }else{
-                    Toast.makeText(getApplicationContext(),"Register is not successfully",Toast.LENGTH_LONG).show();
+                    if(task.getException() instanceof FirebaseAuthUserCollisionException){
+                        Toast.makeText(getApplicationContext(),"User already registered",Toast.LENGTH_LONG).show();
+                    }else{
+                        Toast.makeText(getApplicationContext(),"Error : "+task.getException().getMessage(),Toast.LENGTH_LONG).show();
+                    }
+
 
 
                 }
